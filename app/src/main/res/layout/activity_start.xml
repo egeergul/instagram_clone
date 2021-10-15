@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_start_background"
+    android:paddingHorizontal="48sp"
+    android:paddingTop="75dp"
+    tools:context=".StartActivity"
+    android:paddingBottom="30sp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textColor="@color/white"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:id="@+id/welcome"
+        android:textSize="52sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nice to see you again"
+        android:textColor="@color/white"
+        android:fontFamily="@font/segoe_ui"
+        android:layout_below="@+id/welcome"
+        android:id="@+id/nice_to_see_you_again"
+        android:alpha="0.4"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_marginTop="75sp"
+        android:layout_below="@id/nice_to_see_you_again"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="52sp"
+        android:paddingVertical="15sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:fontFamily="@font/segoe_ui"
+        android:textColor="@color/white"
+        android:id="@+id/login">
+    </Button>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/color_grey"
+            android:text="Already have an account?"
+            android:id="@+id/already_have_an_account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:text="Register"
+            android:textColor="@color/color_pink"
+            android:layout_toEndOf="@+id/already_have_an_account"
+            android:id="@+id/register"/>
+    </LinearLayout>
+
+</RelativeLayout>

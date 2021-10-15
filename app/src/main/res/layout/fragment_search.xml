@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SearchFragment"
+    android:background="@color/color_white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="@color/color_pink">
+
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/color_pink">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"/>
+
+        <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_bar"
+            android:paddingLeft="8dp"
+            android:hint="Search..."
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:id="@+id/recycler_view_users" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="#Hashtags"
+            android:textColor="@color/color_blue"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="18sp"
+            android:textSize="22sp"/>
+
+        <View
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_blue"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_weight="0.5"
+            android:id="@+id/recycler_view_tags"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

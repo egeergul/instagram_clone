@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/more"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_more_dark"
+        android:layout_margin="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/profile_image"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:layout_margin="5dp"
+                android:textColor="@color/color_blue"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:id="@+id/post_image"
+                tools:ignore="MissingConstraints"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/like"
+                android:src="@drawable/ic_like"/>
+
+            <ImageView
+                android:src="@drawable/ic_comment"
+                android:layout_width="30dp"
+                android:id="@+id/comment"
+                android:layout_toEndOf="@+id/like"
+                android:layout_marginStart="10dp"
+                android:layout_height="30dp"/>
+
+            <ImageView
+                android:src="@drawable/ic_save"
+                android:layout_width="30dp"
+                android:id="@+id/save"
+                android:layout_alignParentEnd="true"
+                android:layout_height="30dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/number_of_likes"
+            android:textStyle="bold"
+            android:alpha="0.4"
+            android:textColor="@color/color_grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+               <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/author"
+                    android:textColor="@color/color_blue"/>
+
+                <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/color_primary_dark"
+                    android:editable="false"
+                    android:id="@+id/description"
+                    tools:ignore="Deprecated" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/segoe_ui"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/color_grey"
+            android:alpha="0.4"
+            android:id="@+id/number_of_comments"/>
+
+        <View
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_grey"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
